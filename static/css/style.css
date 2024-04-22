@@ -1,0 +1,22 @@
+.b{
+    font-family: "Roboto",sans-serif;
+    width: 200px;
+    color : #fff;
+    padding: 2%;
+    border-radius: 30px;
+    border: 5px solid blue;
+    transition-duration: 200ms;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px red;
+}
+.b:hover, .b:focus{
+    color: yellow;
+    border: 3px solid yellow;
+    margin-top: 10px;
+    box-shadow: 0 0 20px red;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="text-center text-white mt-5" id="reg">Ro'yxatdan o'tish</h1>
+
+<div class="container d-flex justify-content-center mt-4">
+    <div class="card p-4 border border-2 border-primary col-8">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for fields in form %}
+            <div>
+                <label for="exampleInputEmail1" class="form-label fs-4">{{ fields.label }}:</label>
+                {{ fields }}
+                <small style="color: red;">{{ fields.errors }}</small>
+            </div>
+            {% endfor %}
+            <div class="text-center m-3">
+                <button type="submit" class="btn btn-primary col-3">Ro'yxatdan o'tish</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

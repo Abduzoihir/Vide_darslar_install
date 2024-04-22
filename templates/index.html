@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="mt-5 text-center text-white">Kurslar</h1>
+    <div class="row mt-5 mb-5">
+        {% for c in cards %}
+        <div class="col-3 mb-4  d-flex justify-content-center">
+            <a href="{% url 'video_dars_app:mavzular' c.title %}" class="nav-link">
+                <div class="card border border-2 border-success rounded-5 b" style="width: 20rem;text-align:center;">
+                    <img src="{{ c.image.url }}" style="width: 200px;height: 200px;" class="card-img-top rounded-5"
+                        alt="...">
+                    <div class="card-body text-center">
+                        <p class="card-title" style="color: black;">{{ c.title }}</p>
+                        <div class="verflow-auto mb-3" style="height: 80px;">
+                            <h5 class="card-text"  style="color: black;">{{ c.subtitle }}</h5>
+                        </div>
+                        <a href="{% url 'video_dars_app:mavzular' c.title %}" class="btn btn-success rounded-5 fs-4"
+                            style="width: 100%;">Ko'rish</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
